@@ -31,7 +31,7 @@ npm install -g typescript
 
 ## **Implementing CPU Clustering**
 
-Now, let's create a simple TypeScript program to demonstrate CPU clustering using the `cluster` module in Node.js. We'll distribute a workload across multiple CPU cores, and create a function that calculates Fibonacci sequence for a given number n
+Now, let's create a simple TypeScript program called `ClusterWorker` to demonstrate CPU clustering using the `cluster` module in Node.js. We'll distribute a workload across multiple CPU cores, and create a function that calculates the Fibonacci sequence for a given number n
 
 ```typescript
 //Syphonphilter - 2023-08-16
@@ -67,6 +67,45 @@ else {
   process.exit(0);
 }
 ```
+
+## Run
+
+```typescript
+ts-node ClusterWorker.ts
+```
+
+## Results
+
+```typescript
+Worker 56693 calculated Fibonacci(40): 102334155
+Worker 56693 died
+Worker 56695 calculated Fibonacci(40): 102334155
+Worker 56701 calculated Fibonacci(40): 102334155
+Worker 56694 calculated Fibonacci(40): 102334155
+Worker 56691 calculated Fibonacci(40): 102334155
+Worker 56695 died
+Worker 56692 calculated Fibonacci(40): 102334155
+Worker 56696 calculated Fibonacci(40): 102334155
+Worker 56698 calculated Fibonacci(40): 102334155
+Worker 56690 calculated Fibonacci(40): 102334155
+Worker 56697 calculated Fibonacci(40): 102334155
+Worker 56701 died
+Worker 56694 died
+Worker 56691 died
+Worker 56692 died
+Worker 56696 died
+Worker 56697 died
+Worker 56699 calculated Fibonacci(40): 102334155
+Worker 56698 died
+Worker 56690 died
+Worker 56699 died
+Worker 56700 calculated Fibonacci(40): 102334155
+Worker 56700 died
+```
+
+In our results, each worker is identified by a unique ID (e.g., 56693, 56695, 56701, etc.). Each worker calculates the 40th Fibonacci number and then “dies”, which in this context means it has completed its task and is no longer running. This is a common pattern in concurrent programming, where multiple workers are spawned to perform tasks in parallel to increase the efficiency of the program.
+
+It’s important to note that the order in which the workers complete their tasks and “die” can vary each time the program is run, due to differences in scheduling and other factors. This is why you see the workers completing their tasks and dying in a seemingly random order.
 
 ## Conclusion
 
