@@ -6,7 +6,7 @@ datePublished: Mon Nov 06 2023 04:00:00 GMT+0000 (Coordinated Universal Time)
 cuid: clooscsjn000009kvgi3afb5g
 slug: cpu-clustering-using-typescript
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1699388858021/fc99bdc3-3dcf-4900-9935-97522ff289ea.png
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1699417530644/b937dde0-384a-40d0-b309-9efa34b3d246.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1699417670473/035720df-54e5-46ee-9d37-b8da51dbc236.png
 tags: optimization, typescript, cpu, computation
 
 ---
