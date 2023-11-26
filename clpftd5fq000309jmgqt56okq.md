@@ -255,7 +255,6 @@ Console.WriteLine(Energy(5)); // Outputs the energy given the object mass of 5
 
 ## Using Aliases as Types
 
-  
 In C# 12, the `using` alias directive is a powerful feature that allows you to create aliases for types. This can be used not only for named types (like classes or structs) but also for more complex types like tuples, arrays, pointers, and other types used in unsafe code. This feature can enhance the readability and maintainability of your code, especially when dealing with complex type definitions.
 
 Here is an example of its usage.
@@ -295,7 +294,7 @@ memBuffer[i] = i
 }
 ```
 
-## Conclusion
+# Conclusion
 
 .NET 8 introduces several impactful enhancements aimed at improving performance, development efficiency, and the overall capabilities of the framework. Notable features include expanded support for Native AOT, enabling more efficient and smaller-sized self-contained applications, and the introduction of inline arrays in structs for enhanced memory management. .Net Aspire seems to be a promising cloud-native solution with well-defined orchestration, tooling and components
 
